@@ -80,7 +80,6 @@ public class Login extends AbstractPOM {
     WebElement email;
 
 
-
     public void completeUsernameAnnotations(String username){
         usernameInputAnnotations.sendKeys(username);
     }
