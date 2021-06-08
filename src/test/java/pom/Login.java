@@ -12,11 +12,6 @@ public class Login extends AbstractPOM {
         super(driver);
     }
 
-//    WebElement loginElement= driver.findElement(By.xpath("//div[@class=\"login__title\"]"));
-//    WebElement usernameInput = driver.findElement(By.xpath("//input[@name='login']"));
-//    WebElement passwordInput = driver.findElement(By.xpath("//input[@name='password']"));
-//    WebElement button = driver.findElement(By.xpath("//button[@type='submit']"));
-
     String loginElementStr = "//div[@class=\"login__title\"]";
     String usernameInputStr = "//input[@name='login']";
     String passwordInputStr= "//input[@name='password']";
@@ -79,6 +74,8 @@ public class Login extends AbstractPOM {
     @FindBy(xpath= "//input[@id='input-email']")
     WebElement email;
 
+    @FindBy(xpath= "//input[@id='agree-rules']")
+    WebElement rulesCheckbox;
 
     public void completeUsernameAnnotations(String username){
         usernameInputAnnotations.sendKeys(username);
