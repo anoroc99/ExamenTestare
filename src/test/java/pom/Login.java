@@ -63,21 +63,23 @@ public class Login extends AbstractPOM {
         WebElement button = driver.findElement(buttonBy);
         button.click();
     }
-
+//Examen Testare software. 07.06.2021
     @FindBy(xpath = "//div[@class=\\\"login__title\\\"]")
     public WebElement loginElement;
 
     @FindBy(xpath = "//input[@name='login']")
     public WebElement usernameInputAnnotations;
 
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement logoutAnnotations;
+
     @FindBy(xpath = "//input[@name='password']")
     public WebElement passwordInputAnnotations;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement submitButtonInputAnnotations;
+    @FindBy(xpath= "//input[@id='input-email']")
+    WebElement email;
 
-    @FindBy(xpath = "//a[text()='Выйти из аккаунта']")
-    public WebElement logoutAnnotations;
+
 
     public void completeUsernameAnnotations(String username){
         usernameInputAnnotations.sendKeys(username);

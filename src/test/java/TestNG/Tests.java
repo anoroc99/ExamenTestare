@@ -46,19 +46,23 @@ public class Tests {
         button.click();
     }
 
-    @Test
+    @Test  //Examen Testare software. 07.06.2021
     public void LoginWithDefaultUserTest(){
+
         WebElement loginElement= driver.findElement(By.xpath("//div[@class=\"login__title\"]"));
         Assert.assertTrue(loginElement.isDisplayed());
         WebElement usernameInput = driver.findElement(By.xpath("//input[@name='login']"));
-        usernameInput.sendKeys("ajax0070909");//use your username
+        usernameInput.sendKeys("ajax0070909");
         WebElement passwordInput = driver.findElement(By.xpath("//input[@name='password']"));
-        passwordInput.sendKeys("qwe123!@#");//use your password
+        passwordInput.sendKeys("qwe123!@#");
         WebElement button = driver.findElement(By.xpath("//button[@type='submit']"));
         button.click();
 
-        //logout
+        //Logout, iesire din sistem
+        //Examen Testare software. 07.06.2021
+
         driver.get(baseUrl);
+
         WebElement loginElement2= driver.findElement(By.xpath("//a[text()='Выйти из аккаунта']"));
         loginElement2.click();
     }
