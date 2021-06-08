@@ -80,5 +80,4 @@ public class Login extends AbstractPOM {
     public void completeUsernameAnnotations(String username){
         usernameInputAnnotations.sendKeys(username);
     }
-
 }
